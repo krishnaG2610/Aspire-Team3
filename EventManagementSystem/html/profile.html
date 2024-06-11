@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </head>
+<body>
+    <div class="top">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="/assets/admin.jpg" alt="">
+                <p>user</p> 
+               
+            </div>
+            <ul>
+                <li><a href="profile.html">Dashboard</a></li>
+                <li><a href="CreateEvent.html">Create Events</a></li>
+                <li><a href="ShowEvent.html"> show events</a></li>
+                <li><a href="Book.html">Book tickets</a></li>
+                <li><a href="loginFinal.html">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="side">
+        <header>
+            <h1>Elegant Edge Events !</h1>
+        </header>
+    <div class ="main">
+        <div class="events">
+        <table class="eventstable">
+            <center><h2>UPCOMING OTHER EVENTS</h2></center>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>April 20, 2024</td>
+                <td>concert</td>
+                <td>chennai</td>
+            </tr>
+            <tr>
+                <td>April 21, 2024</td>
+                <td>Birthday</td>
+                <td>pondy</td>
+            </tr>
+            <tr>
+                <td>April 22, 2024</td>
+                <td>Community Yoga</td>
+                <td>pondy</td>
+            </tr>
+            <tr>
+                <td>April 23, 2024</td>
+                <td>F1 Car</td>
+                <td>chennai</td>
+            </tr>
+        </table>
+    </div>
+    <div id="map"> </div>
+    </div>
+</div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Elegant Edge Events. All rights reserved.</p>
+    </footer>
+    <script>
+        var map = L.map('map').setView([13.039791966673011, 80.21169995354566], 10); 
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            var marker = L.marker([13.039791966673011, 80.21169995354566]).addTo(map);
+            marker.bindPopup("<b>U1 Concert</b><br>Nehru Stadium").openPopup();
+        document.querySelector('a[href="#analytics"]').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    var analyticsSection = document.querySelector('.analytics'); 
+    analyticsSection.style.display = 'block'; 
+    analyticsSection.scrollIntoView({ behavior: 'smooth' }); 
+});
+
+    </script>
+   
+</body>
+</html>

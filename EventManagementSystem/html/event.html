@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="title"></div>
+    <div  id="home" class="home">
+        <header>
+            <div class="TopLeft">
+                <!-- <h1>Elegant Edge Events</h1> -->
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="event.html">Home</a></li>
+                    <li><a href="loginFinal.html">Login</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        <img src="/assets/kelly-sikkema-7Wybl_UQM2E-unsplash.jpg" class="background">
+        <img src="/assets/43.png" class="foreground"> 
+        <h1 class="title">Elegant Edge Events<br>welcome!</h1>
+        </header>
+        <section>
+            <h1>Welcome to "Elegant Edge Events"</h1>
+             we specialize in turning your dreams into reality. From intimate gatherings to grand celebrations, we are dedicated to creating unforgettable experiences that exceed your expectations. With our passion for creativity, attention to detail, and commitment to excellence, we'll make your event one to remember.
+            <br>
+            <h2>Why Choose Us?</h2>
+             With years of experience in the industry, our team brings a wealth of knowledge and expertise to every event we undertake. We've successfully executed a wide range of events, from corporate conferences and weddings to festivals and fundraisers.
+             We understand that every event is unique, which is why we take the time to listen to your needs and tailor our services accordingly. Whether you have a specific vision in mind or need help bringing your ideas to life, we'll work closely with you to create a customized plan that reflects your style and preferences.
+    </section>
+    </div>
+    <div id ="events" class="wrapper">
+        <h1>Events</h1>
+    </div>
+    <div class="two">
+        <p>Event Planning: From concept development and budget management to vendor coordination and timeline creation, we handle every aspect of event planning with precision and expertise.
+            <br>
+            Venue Selection: We work closely with a network of top-tier venues to find the perfect setting for your event, whether it's a scenic outdoor space, or a unique unconventional venue.
+            <br>
+            Décor and Design: Our talented team of designers will transform your venue into a breathtaking space that reflects your style and theme, from elegant floral arrangements to stunning lighting effects.
+            <br>
+            Catering and Hospitality: We partner with renowned catering companies to provide exquisite culinary experiences that tantalize the taste buds and leave a lasting impression on your guests.
+            <br>
+            Entertainment and Production: From live music and DJs to multimedia presentations and interactive experiences, we offer a wide range of entertainment options to keep your guests entertained and engaged throughout the event.</p>
+            <br>
+        </div>
+    <div class="head">
+        <h1 style="font-size: 75px; color: aliceblue; text-align: center;">EVENT MANAGED </h1>
+    </div>
+    <div class="slide">
+            <img class="mySlides" src="/assets/4.jpg">
+            <img class="mySlides" src="/assets/6.jpg">
+            <img class="mySlides" src="/assets/9.jpg">
+            <img class="mySlides" src="/assets/12.jpg">
+          </div>
+    </div>
+    <div id ="contact" class="contact">
+        <h3 style="color: #f70776;">CONTACT</h3>
+        <p>Email: eventmnm@gmail.com</p>
+        <p>Phone: 982345678</p>
+        <p>Address: no 123, st Street,Chennai, Tamil Nadu</p>
+    </div>
+    <script>
+        var ind = 0;
+        var max= 50;
+        sslide();
+        function sslide() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            ind++;
+            if (ind > x.length) {
+                ind = 1;
+            }
+            x[ind - 1].style.display = "block";
+    
+            if (ind <= max) {
+                setTimeout(sslide, 2000); 
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday</title>
+    <link rel="stylesheet" href="/css/birthday.css">
+</head>
+<body>
+    <div class="topRight">
+        <a href="event">Home</a>
+        <a href="book.html">book</a>
+        <a href="loginFinal.html">Logout</a> 
+    </div>
+    <div class="top">
+        <div class="slide">
+            <img class="myslide" src="/assets/b1.jpg" >
+            <img class="myslide" src="/assets/b2.jpg" >
+            <img class="myslide" src="/assets/b3.jpg" >
+            <img class="myslide" src="/assets/b4.jpg" >
+            <div class="head">
+                <h1>Birthday Package</h1>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="pic1">
+            <img src="/assets/b5.jpg" >
+        </div>
+        <div class="text">
+            <h1>cake cutting</h1><center><h1>ceremony</h1></center> 
+        </div>
+        <div class="pic2">
+            <img src="/assets/b6.jpg" alt="">
+        </div>
+        <div class="text2">
+            <h1>bouncy castle</h1>
+        </div>
+        <div class="pic3">
+            <img src="/assets/b7.jpg" alt="">
+        </div>
+        <div class="text3">
+            <h1>mimicry</h1>
+        </div>
+        <div class="pic4">
+            <img src="/assets/b8.jpg" alt="">
+        </div>
+        <div class="text4">
+            <h1>games</h1>
+        </div>
+        <div class="button">
+            <button onclick="window.location.href = 'final.html'">Book Now</button>
+        </div>
+    </div>
+    <script>
+            var ind = 0;
+        var max= 50;
+        sslide();
+        function sslide() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            ind++;
+            if (ind > x.length) {
+                ind = 1;
+            }
+            x[ind - 1].style.display = "block";
+    
+            if (ind <= max) {
+                setTimeout(sslide, 2000); 
+            }
+        }
+    </script>
+</body>
+</html>

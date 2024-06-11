@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+    <link rel="stylesheet" href="/css/book.css">
+</head>
+<body>
+    <div class="top">
+        <div class="navbar">
+            <ul>
+                <li><a href="event.html">Home</a></li>
+                <li><a href="loginFinal.html">Book Now</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="loginFinal.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="slide1">
+            <img class="myslide" src="/assets/f10.jpg" >
+            <div class="text">
+                <h1>Upcomming events</h1>
+            </div>
+        </div>
+        <div class="slide2">
+            <img class="myslide" src="/assets/ma.jpg" >
+            <div class="text">
+                
+            </div>
+        </div>
+        <div class="slide3">
+            <img class="myslide" src="/assets/u1.png" >
+            <div class="text">
+            
+            </div>
+        </div>
+        <div class="slide4">
+            <img class="myslide" src="/assets/sc.jpg" >
+            <div class="text">
+              
+        </div>
+        </div>
+        <div class="button">
+            <a href="ticket.html" class="btn">Book Tickets</a>
+        </div>
+    </div>
+    <div class="activity">
+        <img src="/assets/f1.jpg">
+        <div class="text1">
+            <h1>experience better</h1>
+        </div>
+    </div>
+    <div class ="grid">
+        <div class="box">
+            <img src="/assets/birthday.jpg">
+            <h3>Birthday celebration</h3>
+            <p>Both indoor and outdoor available at afforadable price </p>
+            <a href="birthday.html" class="btn">book now</a>
+        </div>
+        <div class="box">
+            <img src="/assets/gat.jpg">
+            <h3>special event & meet up</h3>
+            <p>Gathering for family, friends, alumini, corporate meet up</p>
+            <a href="meetup.html" class="btn">book now</a>
+        </div>
+        <div class="box">
+            <img src="/assets/concert.jpg">
+            <h3>concert</h3>
+            <p>All concert from indoor stage to outdoor stadium </p>
+            <a href="concert.html" class="btn">book now</a>
+        </div>
+        <div class="box">
+        <img src="/assets/box.jpg">
+        <h3>sports</h3>
+        <p>sports like boxing, martial arts, athethic competitions</p>
+        <a href="sports.html" class="btn">book now</a>
+    </div>
+        <div class="box">
+            <img src="/assets/com.jpg">
+            <h3>communtity events</h3>
+            <p>events like communtity yoga, discussions </p>
+            <a href="community.html" class="btn">book now</a>
+        </div>
+        <div class="box">
+            <img src="/assets/f11.jpg">
+            <h3>track events</h3>
+            <p>formula 2 and 3, bike stunts</p>
+            <a href="track.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="join">
+    <div class="left">
+    <div class="grid2">
+        <div class="pic">
+            <img src="/assets/1.jpg">
+        </div>
+        <div class="pic">
+            <img src="/assets/2.jpg">
+        </div>
+        <div class="pic">
+            <img src="/assets/3.jpg">
+        </div>
+        <div class="pic">
+            <img src="/assets/4.jpg" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="right">
+        <h3>let's build a community</h3>
+        <center><button>join us</button></center>
+    </div>
+    </div>
+    <script>
+        var ind = 0;
+        var max= 50;
+        sslide();
+        function sslide() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            ind++;
+            if (ind > x.length) {
+                ind = 1;
+            }
+            x[ind - 1].style.display = "block";
+    
+            if (ind <= max) {
+                setTimeout(sslide, 2000); 
+            }
+        }
+        function scrollon() {
+    console.log("Button clicked"); 
+    var scrollactivity = document.querySelector(".activity");
+    scrollactivity.scrollIntoView({ behavior: 'smooth' });
+}
+
+    </script>
+</body>
+</html>

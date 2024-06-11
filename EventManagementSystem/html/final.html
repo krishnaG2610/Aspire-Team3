@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="/css/final.css"> 
+</head>
+<body>
+    <div class="topRight">
+        <a href="book.html">book</a>
+        <a href="loginFinal.html">Logout</a> 
+    </div>
+    <div class="final">
+        <h2>Book Your Events</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <input type="submit" id='Sbtn' value="Book">
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookingForm = document.getElementById("bookingForm");
+            const message = document.getElementById('message');
+            const Sbtn = document.getElementById('Sbtn');
+    
+            Sbtn.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                bookingForm.style.display = 'none';
+                message.textContent = "Our Staff will contact You";
+            });
+        });
+    </script>
+    
+</body>
+</html>

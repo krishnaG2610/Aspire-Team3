@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission</title>
+
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- css file -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- media query file -->
+    <link rel="stylesheet" href="../assets/css/mediaquery.css" />
+
+    <!-- ------------- aos animation ------------ -->
+    <link rel="stylesheet" type="text/css" href="../assets/aos/css/aos.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  
+    <main>
+
+        <section>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <div class="border border-dark p-5 rounded-4 mt-5 bg-light">
+                            <h2 class="fw-bold text-center">Admin Login</h2>
+
+                            <form action="">
+                                <div class="row pt-3">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="">Admin name :</label>
+                                            <input type="text" id="adminName" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                      
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="">Password :</label>
+                                            <input type="password" id="adminPassword" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="text-center pt-5">
+                                    <button type="button" onclick="validate()" class="btn text-decoration-none btn-success fw-bold px-4 rounded-pill">Login</button>
+                                    <!-- <a href="admin.html" class="btn text-decoration-none btn-success fw-bold px-4 rounded-pill">Login</a> -->
+                                </div>
+                            </form>
+
+                            <div class="text-center mt-3">
+                                <span class="text-danger" id="errorMsg" style="display: none;">Invalid credentials</span>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/aos/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+<script>
+
+    //run once
+    // localStorage.setItem('adminName' , 'Hema');
+    // localStorage.setItem('adminPassword' , 'Hema@123')
+
+    const errorMsg = document.getElementById('errorMsg');
+    function validate(){
+        const adminName = document.getElementById('adminName').value;
+        const adminPassword = document.getElementById('adminPassword').value;
+
+        const adminDbName = localStorage.getItem('adminName');
+        const adminDbPassword = localStorage.getItem('adminPassword');
+
+        if(adminDbName === adminName && adminDbPassword === adminPassword){
+            errorMsg.classList.add('d-none');
+            window.location.href = "admin.html";
+        } else {
+            errorMsg.classList.add('d-inline-block');
+        }
+    }
+</script>

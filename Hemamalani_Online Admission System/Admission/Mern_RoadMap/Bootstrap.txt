@@ -1,0 +1,71 @@
+Bootstrap
+
+container
+container-fluid
+
+row
+
+col
+
+col-xxl-xl-lg-md-sm
+
+col-md-4 - xxl , xl , lg , md
+
+col-4 - xxl-xl-lg-md-sm
+
+gutters
+
+
+
+heading (h1 , h2 .. h6)
+text-muted
+display-1..6
+
+img-fluid
+
+
+form-label
+form-select
+form-control , form-control-lg , form-control-sm
+form-text
+form-check-input
+form-check-label
+
+spacing - 4.6 - ms-1 me-1 ps-1 pe-2  pt-1 pb-1 horizontal , vertical 
+text - text-danger(red) , 
+background - bg-light , bg-danger.
+borders
+colors
+display - d-inline , d-flex , breakpoints 
+flex
+
+d-flex justify-content-center align-items-center
+
+opacity
+overflow
+position
+shadows
+
+
+accordian
+alerts
+modal
+navbar
+nav and tabs
+offcanvas - mobile view navbar.
+
+
+
+text-decoration-none
+
+.cursor_pointer{
+    cursor : pointer !important;
+}
+
+ul{
+    padding:0
+}
+
+li{
+    list-style:none;
+}

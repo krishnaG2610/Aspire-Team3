@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="/css/ticket.css">
+</head>
+<body>
+    <div class="topRight">
+        <a href="book.html">book</a>
+        <a href="loginFinal.html">Logout</a> 
+    </div>
+    <div class="ticketCard">
+        <h1>Event Ticket Booking</h1>
+        <form>
+            <div class="form">
+                <label for="event">Select Event:</label>
+                <select id="event" name="event">
+                    <option value="u1_concert">U1 Concert</option>
+                    <option value="chennai_marathon">Chennai Marathon</option>
+                    <option value="standup_comedy">Standup Comedy Show</option>
+                    <option value="f1_jaipur">F1 Jaipur</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+        </div>
+    <div class="bookingCard" style="display: none;">
+        <center>
+        <img src="/assets/UPI.webp" id="upi">
+        <h4>UPI Payments Accepted Here</h4>
+        <h1>Elegant Edge Events</h1>
+        <p>Scan QR Code below with your UPI App</p>
+        <div id="qr"><img src="/assets/qr.webp"></div>
+        <p>Or</p>
+        <p>Pay to VPA</p>
+        <h4>krish@icici</h4>
+        </center>
+    <div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const ticketCard = document.querySelector('.ticketCard');
+                const bookingCard = document.querySelector('.bookingCard');
+                const btn = document.querySelector('.btn');
+        
+                btn.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+        
+                    bookingCard.style.display = 'block';
+                    ticketCard.style.display = 'none';
+                });
+            });
+        </script>
+        
+    
+
+</body>
+</html>

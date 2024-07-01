@@ -1,0 +1,163 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    z-index: -1;
+    margin: 0px;
+    background-color: black;
+}
+.top{
+    height:100vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.slide img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+.details{
+    height: fit-content;
+    width: 100%;
+}
+.pic1{
+    height: 500px;
+    width: 700px;
+    float:right;
+}
+.pic1 img{
+    margin-top: 110px;
+    height: 500px;
+    width: 600px;
+    padding-left: 50px;
+}
+.head{
+    width:800px;
+    position: absolute;
+    top: 42%;
+    left:27%;
+    font-size: 52px;
+    z-index: 3;
+    color: white;
+}
+.text{
+    padding-top: 200px;
+    color: azure;
+    height: 500px;
+    width: 1000px;
+    font-size: 45px;
+    text-align: center;
+}
+
+
+.pic2{
+    height: 500px;
+    width: 700px;
+    float:left;
+}
+.pic2 img{
+    margin-top: 60px;
+    height: 500px;
+    width: 600px;
+    padding-left: 50px;
+    object-fit: cover;
+}
+.text2{
+    color: aliceblue;
+    float:right;
+    margin-top:250px;
+    text-align: center;
+    padding-right: 200px;
+    font-size: 50px;
+}
+.pic3{
+    height: 500px;
+    width: 700px;
+    float:right;
+    object-fit: cover;
+}
+.pic3 img{
+    margin-top: 300px;
+    height: 500px;
+    width: 600px;
+    padding-left: 50px;
+    object-fit: cover;
+}
+.text3{
+    padding-top: 200px;
+    color: azure;
+    margin-top: 600px;
+    text-align: center;
+    font-size: 50px;
+}
+.pic4{
+    height: 500px;
+    width: 700px;
+    float:left;
+    object-fit: cover;
+}
+.pic4 img{
+    margin-top: 300px;
+    height: 500px;
+    width: 600px;
+    padding-left: 50px;
+}
+.text4{
+    color: aliceblue;
+    float:right;
+    margin-top:500px;
+    text-align: center;
+    padding-right: 200px;
+    font-size: 50px;
+}
+.button {
+    position: absolute;
+    top: 420%; 
+    left: 42%; 
+    z-index: 9999;
+    padding: 20px 40px;
+    padding-bottom: 100px;
+}
+button{
+    padding: 20px 40px;
+    background-color: rgba(124, 25, 25, 0);
+    font-size: 18px; 
+    color: aliceblue;
+    border-color: aliceblue;
+}
+.button button:hover{
+    color: rgb(186, 73, 8);
+    border-color: rgb(241, 132, 8);
+}
+
+.topRight{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex; 
+    gap: 10px; 
+    z-index: 9999;
+}
+.topRight a{
+    text-decoration: none;
+    color:white;
+    font-size: 23px;
+    padding: 10px 15px;
+}
+.topRight a:hover {
+    color: rgba(120, 120, 120, 0.8); 
+}
+footer{
+    margin-top: 1050px;
+    z-index: 9999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #171616;
+    color: white;
+    text-align: center;
+    width:100%;
+}

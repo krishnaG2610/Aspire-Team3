@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meetuo</title>
+    <link rel="stylesheet" href="/css/meetup.css">
+</head>
+<body>
+    <div class="topRight">
+        <a href="event">Home</a>
+        <a href="book.html">book</a>
+        <a href="loginFinal.html">Logout</a> 
+    </div>
+    <div class="top">
+        <div class="slide">
+            <img class="myslide" src="/assets/m1.jpg" >
+            <img class="myslide" src="/assets/m2.jpg" >
+            <img class="myslide" src="/assets/m3.jpg" >
+            <img class="myslide" src="/assets/m4.jpg" >
+            <div class="head">
+                <center><h1>special event and <center> meetup Package</center></h1></center>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="pic1">
+            <img src="/assets/m5.jpg" >
+        </div>
+        <div class="text">
+            <h1>standup and</h1><center><h1>singing</h1></center> 
+        </div>
+        <div class="pic2">
+            <img src="/assets/m6.jpg" alt="">
+        </div>
+        <div class="text2">
+            <h1>Dinning</h1>
+        </div>
+        <div class="pic3">
+            <img src="/assets/m7.jpg" alt="">
+        </div>
+        <div class="text3">
+            <h1>stage for disscussion</h1> 
+        </div>
+        <div class="pic4">
+            <img src="/assets/m8.jpg" alt="">
+        </div>
+        <div class="text4">
+            <h1>photography</h1>
+        </div>
+        <div class="button">
+            <button onclick="window.location.href = 'final.html'">Book Now</button>
+        </div>
+    </div>
+    <script>
+            var ind = 0;
+        var max= 50;
+        sslide();
+        function sslide() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            ind++;
+            if (ind > x.length) {
+                ind = 1;
+            }
+            x[ind - 1].style.display = "block";
+    
+            if (ind <= max) {
+                setTimeout(sslide, 2000); 
+            }
+        }
+    </script>
+</body>
+</html>

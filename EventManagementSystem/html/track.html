@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>track</title>
+    <link rel="stylesheet" href="/css/track.css">
+</head>
+<body>
+    <div class="topRight">
+        <a href="event">Home</a>
+        <a href="book.html">book</a>
+        <a href="loginFinal.html">Logout</a> 
+    </div>
+    <div class="top">
+        <div class="slide">
+            <img class="myslide" src="/assets/t1.jpg" >
+            <img class="myslide" src="/assets/t2.jpg" >
+            <img class="myslide" src="/assets/t3.jpg" >
+            <img class="myslide" src="/assets/t4.jpg" >
+            <div class="head">
+                <h1>tracks Package</h1>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="pic1">
+            <img src="/assets/t5.jpg" >
+        </div>
+        <div class="text">
+            <h1>offroading</h1>
+        </div>
+        <div class="pic2">
+            <img src="/assets/t6.jpg" alt="">
+        </div>
+        <div class="text2">
+            <h1>stunts</h1>
+        </div>
+        <div class="pic3">
+            <img src="/assets/t7.jpg" alt="">
+        </div>
+        <div class="text3">
+            <h1>mud race</h1> 
+        </div>
+        <div class="pic4">
+            <img src="/assets/t8.jpg" alt="">
+        </div>
+        <div class="text4">
+            <h1>charity shows</h1>
+        </div>
+        <div class="button">
+            <button onclick="window.location.href = 'final.html'">Book Now</button>
+        </div>
+    </div>
+    <script>
+            var ind = 0;
+        var max= 50;
+        sslide();
+        function sslide() {
+            var i;
+            var x = document.getElementsByClassName("myslide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            ind++;
+            if (ind > x.length) {
+                ind = 1;
+            }
+            x[ind - 1].style.display = "block";
+    
+            if (ind <= max) {
+                setTimeout(sslide, 2000); 
+            }
+        }
+    </script>
+</body>
+</html>
